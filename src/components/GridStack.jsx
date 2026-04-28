@@ -10,22 +10,17 @@ const TeamStack = () => {
     { name: "CSS3", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" },
     { name: "JavaScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
     { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
-    { name: "Next.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" },
     { name: "Tailwind CSS", icon: "https://images.seeklogo.com/logo-png/40/1/tailwind-css-wordmark-logo-png_seeklogo-409466.png", large: true },
-    { name: "Bootstrap", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" },
     { name: "PHP", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" },
-    { name: "Laravel", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-original.svg" },
     { name: "Python", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
-    { name: "Django", icon: "https://image.pngaaa.com/344/1947344-middle.png", large: true },
     { name: "Flask", icon: "https://tse1.mm.bing.net/th/id/OIP.pNv5hoaND-MKiZ5uHJOeOwHaEK?w=750&h=422&rs=1&pid=ImgDetMain&o=7&rm=3", large: true },
     { name: "Express.js", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" },
     { name: "REST API", icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='10' fill='%23007ACC'/%3E%3Ctext x='12' y='16' font-size='8' text-anchor='middle' fill='white'%3EREST%3C/text%3E%3C/svg%3E" },
-    { name: "Go", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original-wordmark.svg" },
     { name: "PostgreSQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" },
     { name: "SQLAlchemy", icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='4' fill='%230078D5'/%3E%3Ctext x='12' y='16' font-size='6' text-anchor='middle' fill='white'%3ESQLA%3C/text%3E%3C/svg%3E" },
-    { name: "WordPress", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-original.svg" },
-    { name: "Elementor", icon: "https://logowik.com/content/uploads/images/elementor1618.jpg", large: true },
-    { name: "WPBakery", icon: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='10' fill='%23FF3366'/%3E%3Ctext x='12' y='16' font-size='5' text-anchor='middle' fill='white'%3EWPB%3C/text%3E%3C/svg%3E" },
+    { name: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
+    { name: "GitHub", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },  
+    { name: "Gemini IA", icon: "data:image/svg+xml,%3Csvg xmlns='https://share.google/dLBxYIkn50ImuINre' viewBox='0 0 128 128'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23ff4b4b'/%3E%3Cstop offset='25%25' stop-color='%23ffcc33'/%3E%3Cstop offset='50%25' stop-color='%234fb7ff'/%3E%3Cstop offset='100%25' stop-color='%2343d363'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M64 4C96.4 4 124 31.6 124 64C124 96.4 96.4 124 64 124C31.6 124 4 96.4 4 64C4 31.6 31.6 4 64 4Z' fill='url(%23g)'/%3E%3Cpath d='M64 18C43.4 18 26 35.4 26 56C26 76.6 43.4 94 64 94C84.6 94 102 76.6 102 56C102 35.4 84.6 18 64 18Z' fill='%23ffffff' opacity='0.15'/%3E%3Cpath d='M64 28C47.9 28 34 41.9 34 58C34 74.1 47.9 88 64 88C80.1 88 94 74.1 94 58C94 41.9 80.1 28 64 28Z' fill='white' opacity='0.2'/%3E%3C/svg%3E" },
   ];
 
   const duplicatedStacks = [...stacks, ...stacks, ...stacks];
@@ -37,13 +32,13 @@ const TeamStack = () => {
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 md:gap-8 border-l-2 sm:border-l-4 border-blue-600 pl-4 sm:pl-6 lg:pl-8">
           <div className="max-w-3xl">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-black dark:text-white mb-3 sm:mb-4 tracking-tighter leading-tight">
-              Notre <span className="text-blue-600">Arsenal</span> Technologique.
+              Mon <span className="text-blue-600">Arsenal</span> Technologique.
             </h2>
             <p className="text-sm sm:text-base lg:text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
-              En tant que collectif de développeurs, nous mutualisons nos compétences pour concevoir des 
-              architectures <strong className="font-bold text-blue-600 dark:text-blue-500">Full-Stack</strong> robustes. 
-              Du design d'interface à la gestion de bases de données complexes, notre stack est optimisée 
-              pour la performance et l'évolutivité.
+              En tant que développeur indépendant, je rassemble mes compétences pour créer des 
+              architectures <strong className="font-bold text-blue-600 dark:text-blue-500">Full-Stack</strong> fiables et modernes. 
+              Du design d'interface à la gestion de bases de données, mon stack est pensé pour la performance,
+              l'évolutivité et des expériences utilisateurs soignées.
             </p>
           </div>
         </div>
@@ -127,7 +122,7 @@ const TeamStack = () => {
           onClick={() => setShowAll(!showAll)}
           className="text-[8px] sm:text-[9px] lg:text-[10px] font-black tracking-[0.2em] sm:tracking-[0.3em] lg:tracking-[0.4em] text-slate-900 dark:text-white border-b-2 border-blue-600 pb-1 sm:pb-2 hover:text-blue-600 hover:border-blue-700 transition-all duration-300 uppercase"
         >
-          {showAll ? "↑ Réduire la vue" : "↓ Voir tout l'arsenal"}
+          {showAll ? " Réduire la vue" : " Voir tout l'arsenal"}
         </motion.button>
       </div>
 

@@ -85,7 +85,7 @@ const form = useRef();
             <nav className="flex items-center gap-4 lg:gap-9">
               {[
                 { name: "Accueil", href: "#Accueil" },
-                { name: "Équipe", href: "#team" },
+                { name: "À propos", href: "#team" },
                 { name: "Projets", href: "#Projets" },
                 { name: "Stack", href: "#stack" }
               ].map((link) => (
@@ -158,7 +158,7 @@ const form = useRef();
               <nav className="flex flex-col gap-4">
                 {[
                   { name: "Accueil", href: "#Accueil" },
-                  { name: "Équipe", href: "#team" },
+                  { name: "À propos", href: "#team" },
                   { name: "Projets", href: "#Projets" },
                   { name: "Stack", href: "#stack" },
                   { name: "Contact", href: "#contact" }
@@ -291,7 +291,7 @@ const form = useRef();
                   </div>
                   <h3 className="text-lg sm:text-xl font-bold mb-1 sm:mb-2 text-primary">Développement Fullstack</h3>
                   <p className="text-sm sm:text-base text-slate-600 dark:text-slate-400">
-                    Applications rapides et évolutives avec React, Next.js, Laravel et Python.
+                   Développement d’applications web performantes, modernes et adaptées aux besoins des utilisateurs.
                   </p>
                 </motion.div>
 
@@ -328,28 +328,7 @@ const form = useRef();
                 </motion.div>
               </div>
 
-              <motion.div 
-                variants={fadeInUp}
-                className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8 mt-12 sm:mt-16 text-center px-2"
-              >
-                <div className="group">
-                  <h4 className="text-xl sm:text-2xl md:text-3xl font-bold text-primary group-hover:scale-110 transition-transform">10+</h4>
-                  <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400">Projets réalisés</p>
-                </div>
-                <div className="group">
-                  <h4 className="text-xl sm:text-2xl md:text-3xl font-bold text-primary group-hover:scale-110 transition-transform">10+</h4>
-                  <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400">Clients satisfaits</p>
-                </div>
-                <div className="group">
-                  <h4 className="text-xl sm:text-2xl md:text-3xl font-bold text-primary group-hover:scale-110 transition-transform">5+</h4>
-                  <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400">Technologies maîtrisées</p>
-                </div>
-                <div className="group">
-                  <h4 className="text-xl sm:text-2xl md:text-3xl font-bold text-primary group-hover:scale-110 transition-transform">100%</h4>
-                  <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400">Qualité</p>
-                </div>
               </motion.div>
-            </motion.div>
           </section>
 
           {/* PROJETS SECTION */}
@@ -364,13 +343,13 @@ const form = useRef();
               <div className="mb-8 sm:mb-12 px-2">
                 <motion.h2 
                   variants={fadeInUp}
-                  className="text-slate-900 dark:text-slate-100 text-2xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-4"
+                  className="text-slate-900 dark:text-slate-100 text-2xl sm:text-3xl md:text-4xl font-bold mb-2 sm:mb-4 justify-center text-center"
                 >
                   Mes réalisations marquantes
                 </motion.h2>
                 <motion.p 
                   variants={fadeInUp}
-                  className="text-slate-600 dark:text-slate-400 text-sm sm:text-base max-w-xl"
+                  className="text-slate-600 dark:text-slate-400 text-sm sm:text-base max-w-xl justify-center text-center mx-auto leading-relaxed"
                 >
                   Une sélection de mes projets les plus récents, alliant performance technique et design sur mesure.
                 </motion.p>
@@ -379,110 +358,63 @@ const form = useRef();
               <motion.div 
                 className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 px-2 sm:px-0"
               >
-                <motion.a 
-                  variants={fadeInUp}
-                  whileHover={{ y: -8 }}
-                  href="https://librecommelere.com/" 
-                  target="_blank" 
-                  className="group rounded-2xl overflow-hidden bg-white dark:bg-slate-900 shadow-lg border border-slate-100 dark:border-slate-800 transition-all"
-                >
-                  <div className="overflow-hidden">
-                    <img src="/images/pro1.png" alt="Libre" className="w-full h-40 sm:h-44 md:h-48 lg:h-52 object-cover transition-transform duration-500 group-hover:scale-110" />
-                  </div>
-                  <div className="p-4 sm:p-5 lg:p-6">
-                    <h3 className="text-slate-900 dark:text-white font-bold text-base sm:text-lg lg:text-xl">Libre Comme Lere</h3>
-                    <p className="text-slate-600 dark:text-slate-400 text-xs sm:text-sm mt-1 sm:mt-2">Écosystème numérique dédié à la promotion culturelle.</p>
-                    <div className="mt-3 sm:mt-4 flex flex-wrap gap-1 sm:gap-2">
-                      <span className="text-[8px] sm:text-[10px] font-bold uppercase tracking-wider bg-primary/10 text-primary px-1.5 sm:px-2 py-0.5 sm:py-1 rounded">UI/UX</span>
-                      <span className="text-[8px] sm:text-[10px] font-bold uppercase tracking-wider bg-primary/10 text-primary px-1.5 sm:px-2 py-0.5 sm:py-1 rounded">WordPress</span>
-                    </div>
-                  </div>
-                </motion.a>
+                <motion.div 
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  whileHover={{ y: -8 }}
+  className="group rounded-2xl overflow-hidden bg-white dark:bg-slate-900 shadow-lg border border-slate-100 dark:border-slate-800 transition-all"
+>
+  <div className="overflow-hidden">
+    <img src="/images/pro5.png" alt="Interne" className="w-full h-40 sm:h-44 md:h-48 lg:h-52 object-cover transition-transform duration-500 group-hover:scale-110" />
+  </div>
+  <div className="p-4 sm:p-5 lg:p-6">
+    <h3 className="text-slate-900 dark:text-white font-bold text-base sm:text-lg lg:text-xl">
+      Simplon Code Hub
+    </h3>
+    <p className="text-slate-600 dark:text-slate-400 text-xs sm:text-sm mt-1 sm:mt-2">
+      Outil interne de gestion de code source et de collaboration.
+    </p>
 
-                <motion.a 
-                  variants={fadeInUp}
-                  whileHover={{ y: -8 }}
-                  href="https://avalonsecure.com/" 
-                  target="_blank" 
-                  className="group rounded-2xl overflow-hidden bg-white dark:bg-slate-900 shadow-lg border border-slate-100 dark:border-slate-800 transition-all"
-                >
-                  <div className="overflow-hidden">
-                    <img src="/images/pro2.png" alt="Avalon" className="w-full h-40 sm:h-44 md:h-48 lg:h-52 object-cover transition-transform duration-500 group-hover:scale-110" />
-                  </div>
-                  <div className="p-4 sm:p-5 lg:p-6">
-                    <h3 className="text-slate-900 dark:text-white font-bold text-base sm:text-lg lg:text-xl">Avalon Secure</h3>
-                    <p className="text-slate-600 dark:text-slate-400 text-xs sm:text-sm mt-1 sm:mt-2">Architecture sécurisée pour la protection des données numériques.</p>
-                    <div className="mt-3 sm:mt-4 flex flex-wrap gap-1 sm:gap-2">
-                      <span className="text-[8px] sm:text-[10px] font-bold uppercase tracking-wider bg-primary/10 text-primary px-1.5 sm:px-2 py-0.5 sm:py-1 rounded">Sécurité</span>
-                      <span className="text-[8px] sm:text-[10px] font-bold uppercase tracking-wider bg-primary/10 text-primary px-1.5 sm:px-2 py-0.5 sm:py-1 rounded">Branding</span>
-                    </div>
-                  </div>
-                </motion.a>
+    <div className="mt-3 sm:mt-4 flex flex-wrap gap-1 sm:gap-2">
+      <span className="text-[8px] sm:text-[10px] font-bold uppercase tracking-wider bg-purple-100 text-purple-700 px-1.5 sm:px-2 py-0.5 sm:py-1 rounded">
+        React
+      </span>
+      <span className="text-[8px] sm:text-[10px] font-bold uppercase tracking-wider bg-cyan-100 text-cyan-700 px-1.5 sm:px-2 py-0.5 sm:py-1 rounded">
+        Tailwind
+      </span>
+      <span className="text-[8px] sm:text-[10px] font-bold uppercase tracking-wider bg-yellow-100 text-yellow-700 px-1.5 sm:px-2 py-0.5 sm:py-1 rounded">
+        JavaScript
+      </span>
+      <span className="text-[8px] sm:text-[10px] font-bold uppercase tracking-wider bg-blue-100 text-blue-700 px-1.5 sm:px-2 py-0.5 sm:py-1 rounded">
+        Python
+      </span>
+      <span className="text-[8px] sm:text-[10px] font-bold uppercase tracking-wider bg-green-100 text-green-700 px-1.5 sm:px-2 py-0.5 sm:py-1 rounded">
+        Flask
+      </span>
+      <span className="text-[8px] sm:text-[10px] font-bold uppercase tracking-wider bg-indigo-100 text-indigo-700 px-1.5 sm:px-2 py-0.5 sm:py-1 rounded">
+        PostgreSQL
+      </span>
+    </div>
 
-                <motion.a 
-                  variants={fadeInUp}
-                  whileHover={{ y: -8 }}
-                  href="https://prepaexams.esgis.bj/" 
-                  target="_blank" 
-                  className="group rounded-2xl overflow-hidden bg-white dark:bg-slate-900 shadow-lg border border-slate-100 dark:border-slate-800 transition-all"
-                >
-                  <div className="overflow-hidden">
-                    <img src="/images/pro3.png" alt="Prepa" className="w-full h-40 sm:h-44 md:h-48 lg:h-52 object-cover transition-transform duration-500 group-hover:scale-110" />
-                  </div>
-                  <div className="p-4 sm:p-5 lg:p-6">
-                    <h3 className="text-slate-900 dark:text-white font-bold text-base sm:text-lg lg:text-xl">PrepaExams ESGIS</h3>
-                    <p className="text-slate-600 dark:text-slate-400 text-xs sm:text-sm mt-1 sm:mt-2">Solution EdTech facilitant l'accès aux ressources pédagogiques.</p>
-                    <div className="mt-3 sm:mt-4 flex flex-wrap gap-1 sm:gap-2">
-                      <span className="text-[8px] sm:text-[10px] font-bold uppercase tracking-wider bg-primary/10 text-primary px-1.5 sm:px-2 py-0.5 sm:py-1 rounded">Éducation</span>
-                      <span className="text-[8px] sm:text-[10px] font-bold uppercase tracking-wider bg-primary/10 text-primary px-1.5 sm:px-2 py-0.5 sm:py-1 rounded">React</span>
-                    </div>
-                  </div>
-                </motion.a>
+    <a
+      href="https://stage-7kal-f0yj7vliy-wariss-projects-b1b0641d.vercel.app/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-primary text-xs sm:text-sm font-bold mt-3 sm:mt-4 inline-flex items-center group-hover:underline"
+    >
+      Voir le projet 
+    </a>
+  </div>
+</motion.div>
+
 
                 {showMore && (
                   <>
-                    <motion.a 
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      whileHover={{ y: -8 }}
-                      href="https://www.dinerotechnologieslimited.com/" 
-                      target="_blank" 
-                      className="group rounded-2xl overflow-hidden bg-white dark:bg-slate-900 shadow-lg border border-slate-100 dark:border-slate-800 transition-all"
-                    >
-                      <div className="overflow-hidden">
-                        <img src="/images/pro4.png" alt="Dinero" className="w-full h-40 sm:h-44 md:h-48 lg:h-52 object-cover transition-transform duration-500 group-hover:scale-110" />
-                      </div>
-                      <div className="p-4 sm:p-5 lg:p-6">
-                        <h3 className="text-slate-900 dark:text-white font-bold text-base sm:text-lg lg:text-xl">Dinero Technologies</h3>
-                        <p className="text-slate-600 dark:text-slate-400 text-xs sm:text-sm mt-1 sm:mt-2">Vitrines technologiques pour entreprises en pleine expansion.</p>
-                        <div className="mt-3 sm:mt-4 flex flex-wrap gap-1 sm:gap-2">
-                          <span className="text-[8px] sm:text-[10px] font-bold uppercase tracking-wider bg-primary/10 text-primary px-1.5 sm:px-2 py-0.5 sm:py-1 rounded">Corporate</span>
-                        </div>
-                      </div>
-                    </motion.a>
-
-                    <motion.div 
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      whileHover={{ y: -8 }}
-                      className="group rounded-2xl overflow-hidden bg-white dark:bg-slate-900 shadow-lg border border-slate-100 dark:border-slate-800 transition-all"
-                    >
-                      <div className="overflow-hidden">
-                        <img src="/images/pro5.png" alt="Interne" className="w-full h-40 sm:h-44 md:h-48 lg:h-52 object-cover transition-transform duration-500 group-hover:scale-110" />
-                      </div>
-                      <div className="p-4 sm:p-5 lg:p-6">
-                        <h3 className="text-slate-900 dark:text-white font-bold text-base sm:text-lg lg:text-xl">Simplon Code Hub</h3>
-                        <p className="text-slate-600 dark:text-slate-400 text-xs sm:text-sm mt-1 sm:mt-2">Outil interne de gestion de code source et collaboration.</p>
-                        <div className="mt-3 sm:mt-4 flex flex-wrap gap-1 sm:gap-2">
-                          <span className="text-[8px] sm:text-[10px] font-bold uppercase tracking-wider bg-purple-100 text-purple-700 px-1.5 sm:px-2 py-0.5 sm:py-1 rounded">Fullstack</span>
-                          <span className="text-[8px] sm:text-[10px] font-bold uppercase tracking-wider bg-blue-100 text-blue-700 px-1.5 sm:px-2 py-0.5 sm:py-1 rounded">Python</span>
-                        </div>
-                        <a href="https://stage-7kal-f0yj7vliy-wariss-projects-b1b0641d.vercel.app/" target="_blank" className="text-primary text-xs sm:text-sm font-bold mt-3 sm:mt-4 inline-flex items-center group-hover:underline">
-                          Explorer l'interface <span className="ml-1 sm:ml-2">→</span>
-                        </a>
-                      </div>
-                    </motion.div>
+                    
+                    
                   </>
+                                       /*ajouter d'autre projet qui seront viseble que si le bouton Découvrir plus de projets est cliqué a mettre dans showMore */
+
                 )}
               </motion.div>
 
@@ -664,11 +596,11 @@ const form = useRef();
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
                     <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
                   </span>
-                  Disponible pour nouveaux projets
+                  Disponible pour tes projets
                 </div>
 
                 <p className="text-slate-400 text-xs sm:text-sm leading-relaxed max-w-sm mx-auto sm:mx-0">
-                  Expertise fullstack basée à Abidjan. Je transforme tes défis techniques en succès digitaux.
+                  Développeur full-stack basé à Abidjan, je réalise des sites et applications sur mesure pour les entrepreneurs et les PME.
                 </p>
               </div>
 
@@ -678,37 +610,35 @@ const form = useRef();
                   <li>
                     <a href="#team" className="hover:text-primary transition flex items-center justify-center sm:justify-start gap-1 sm:gap-2 group">
                       <span className="h-px w-0 bg-primary transition-all group-hover:w-2 sm:group-hover:w-3"></span>
-                      L'Équipe
+                      À propos
                     </a>
                   </li>
                   <li>
                     <a href="#Projets" className="hover:text-primary transition flex items-center justify-center sm:justify-start gap-1 sm:gap-2 group">
                       <span className="h-px w-0 bg-primary transition-all group-hover:w-2 sm:group-hover:w-3"></span>
-                      Nos Projets
+                      Projets
                     </a>
                   </li>
                   <li>
                     <a href="#contact" className="hover:text-primary transition flex items-center justify-center sm:justify-start gap-1 sm:gap-2 group">
                       <span className="h-px w-0 bg-primary transition-all group-hover:w-2 sm:group-hover:w-3"></span>
-                      Nous Contacter
+                      Contact
                     </a>
                   </li>
                 </ul>
               </div>
 
               <div className="text-center sm:text-left sm:col-span-2 md:col-span-1">
-                <h4 className="text-white font-bold text-sm sm:text-base mb-3 sm:mb-4">Notre Engagement</h4>
+                <h4 className="text-white font-bold text-sm sm:text-base mb-3 sm:mb-4">Ce que je propose</h4>
                 <ul className="space-y-1.5 sm:space-y-2 text-slate-400 text-xs sm:text-sm italic">
-                  <li>"Code propre & performant"</li>
-                  <li>"Respect strict des délais"</li>
-                  <li>"Accompagnement post-livraison"</li>
+                  <li>Code propre, maintenable et optimisé.</li>
+                  <li>Livraison rapide et respect des délais.</li>
+                  <li>Support et suivi après mise en ligne.</li>
                 </ul>
               </div>
             </div>
 
-            <div className="border-t border-slate-800 mt-6 sm:mt-8 pt-4 sm:pt-6 text-center text-slate-500 text-[10px] sm:text-xs">
-              © {new Date().getFullYear()} Waris.dev — Tous droits réservés.
-            </div>
+           
           </motion.div>
         </footer>
       </div>
