@@ -1,33 +1,33 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import GridStack from './GridStack';
 import { motion } from "framer-motion";
-import emailjs from '@emailjs/browser';
-
 
 const Page = () => {
   const [darkMode, setDarkMode] = useState(false);
   const [showMore, setShowMore] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-const form = useRef();
 
-  const sendEmail = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Remplace ces IDs par ceux de ton compte EmailJS
-    const SERVICE_ID = "service_c5m9k2u";
-    const TEMPLATE_ID = "template_taysonj";
-    const PUBLIC_KEY = "y_m3LUvdRamRXkb3I";
+    const formData = new FormData(e.target);
 
-    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current, PUBLIC_KEY)
-      .then((result) => {
-          console.log(result.text);
-          alert("Message envoyé avec succès !");
-          form.current.reset(); // Vide le formulaire après envoi
-      }, (error) => {
-          console.log(error.text);
-          alert("Une erreur est survenue, veuillez réessayer.");
-      });
+    const response = await fetch("https://formspree.io/f/mgorglgk", {
+      method: "POST",
+      body: formData,
+      headers: {
+        Accept: "application/json",
+      },
+    });
+
+    if (response.ok) {
+      alert("Message envoyé avec succès !");
+      e.target.reset();
+    } else {
+      alert("Erreur lors de l'envoi.");
+    }
   };
+
   useEffect(() => {
     if (darkMode) {
       document.documentElement.classList.add('dark');
@@ -407,6 +407,52 @@ const form = useRef();
   </div>
 </motion.div>
 
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  whileHover={{ y: -8 }}
+                  className="group rounded-2xl overflow-hidden bg-white dark:bg-slate-900 shadow-lg border border-slate-100 dark:border-slate-800 transition-all"
+                >
+                  <div className="overflow-hidden">
+                    <img
+                      src="/images/pro6.png"
+                      alt="Assistant Santé IA"
+                      className="w-full h-40 sm:h-44 md:h-48 lg:h-52 object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                  </div>
+                  <div className="p-4 sm:p-5 lg:p-6">
+                    <h3 className="text-slate-900 dark:text-white font-bold text-base sm:text-lg lg:text-xl">
+                      Assistant Santé IA
+                    </h3>
+                    <p className="text-slate-600 dark:text-slate-400 text-xs sm:text-sm mt-1 sm:mt-2">
+                      Chatbot santé intelligent utilisant React, Tailwind CSS, Express.js et l'API Gemini pour répondre aux questions médicales.
+                    </p>
+
+                    <div className="mt-3 sm:mt-4 flex flex-wrap gap-1 sm:gap-2">
+                      <span className="text-[8px] sm:text-[10px] font-bold uppercase tracking-wider bg-purple-100 text-purple-700 px-1.5 sm:px-2 py-0.5 sm:py-1 rounded">
+                        React
+                      </span>
+                      <span className="text-[8px] sm:text-[10px] font-bold uppercase tracking-wider bg-cyan-100 text-cyan-700 px-1.5 sm:px-2 py-0.5 sm:py-1 rounded">
+                        Tailwind
+                      </span>
+                      <span className="text-[8px] sm:text-[10px] font-bold uppercase tracking-wider bg-orange-100 text-orange-700 px-1.5 sm:px-2 py-0.5 sm:py-1 rounded">
+                        Express.js
+                      </span>
+                      <span className="text-[8px] sm:text-[10px] font-bold uppercase tracking-wider bg-blue-100 text-blue-700 px-1.5 sm:px-2 py-0.5 sm:py-1 rounded">
+                        Gemini API
+                      </span>
+                    </div>
+
+                    <a
+                      href="https://lem-8dqk.vercel.app/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-primary text-xs sm:text-sm font-bold mt-3 sm:mt-4 inline-flex items-center group-hover:underline"
+                    >
+                      Voir le projet
+                    </a>
+                  </div>
+                </motion.div>
 
                 {showMore && (
                   <>
@@ -518,8 +564,7 @@ const form = useRef();
       <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -mr-16 -mt-16" />
 
       <form
-        ref={form}
-        onSubmit={sendEmail}
+        onSubmit={handleSubmit}
         className="space-y-5 relative z-10"
       >
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -529,7 +574,7 @@ const form = useRef();
             </label>
             <input
               type="text"
-              name="user_name"
+              name="name"
               required
               placeholder="Ex: Jean Marc"
               className="w-full mt-1 bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 text-sm dark:text-white outline-none focus:ring-2 focus:ring-primary/50"
@@ -542,7 +587,7 @@ const form = useRef();
             </label>
             <input
               type="email"
-              name="user_email"
+              name="email"
               required
               placeholder="votre@email.com"
               className="w-full mt-1 bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 text-sm dark:text-white outline-none focus:ring-2 focus:ring-primary/50"
